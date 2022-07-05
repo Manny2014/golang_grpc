@@ -5,4 +5,5 @@ init:
 	brew install grpcurl
 
 proto-gen:
-	@ protoc -I./proto --go_out=plugins=grpc:./internal/gen/chat  --go_opt=paths=source_relative chat.proto
+	@mkdir -p internal/gen/chat && \
+	protoc -I./proto --go_out=plugins=grpc:./internal/gen/chat  --go_opt=paths=source_relative chat.proto
