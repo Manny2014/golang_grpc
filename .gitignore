@@ -1,0 +1,2 @@
+internal/gen/**/*.pb.go
+.idea/**
